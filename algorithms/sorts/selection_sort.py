@@ -9,6 +9,8 @@ def sort(a: list):
                 exchange(a, i, j)
 
 
-x = [1, 3, 0, 11, 3, 5, 6, -1, -2, 78, 10]
+x = [
+    5, 7, 2, 11, 23, -1, 0, 1, 16
+]
 sort(x)
 print(x)

@@ -1,4 +1,4 @@
-def is_lesser_than(value_one, value_two) -> bool:
+def is_less_than(value_one, value_two) -> bool:
     return value_one < value_two
 
 
