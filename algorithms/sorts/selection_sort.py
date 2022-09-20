@@ -1,12 +1,19 @@
+from re import I
 from util import exchange
 
 
 def sort(a: list):
     size = len(a)
-    for i in range(size):
-        for j in range(i + 1, size):
-            if a[i] > a[j]:
-                exchange(a, i, j)
+    index_of_current_value = 0
+    while index_of_current_value < size:
+        index_of_min_value = index_of_current_value
+        index_of_value_to_compare = index_of_current_value + 1
+        while index_of_value_to_compare < size:
+            if a[index_of_value_to_compare] < a[index_of_min_value]:
+                index_of_min_value = index_of_value_to_compare
+            index_of_value_to_compare += 1
+        exchange(a, index_of_current_value, index_of_min_value)
+        index_of_current_value += 1
 
 
 x = [
